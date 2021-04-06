@@ -26,5 +26,7 @@ def find_smallest_angle(clock: str) -> float or None:
     hours += minutes / 60  # Add fractional hour to hours
     hours_angle = hours * 30  # 360/12 = 30 degrees/hour
     minutes_angle = minutes * 6  # 360/60 = 6 degrees/minute
-    smallest_angle = abs(hours_angle - minutes_angle)
-    return smallest_angle if smallest_angle < 180 else 360 - smallest_angle
+    angle = abs(hours_angle - minutes_angle)
+    return angle if angle < 180 else 360 - angle
+
+print(find_smallest_angle("4:30"))
