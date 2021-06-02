@@ -5,7 +5,6 @@ Create a function called "find_smallest_angle" (snake-case) that,
 
  The input is a string with hours, a colon, and minutes
 
-
  The output is a float of the smallest angle of the hands
 
  12-hour time
@@ -28,5 +27,3 @@ def find_smallest_angle(clock: str) -> float or None:
     minutes_angle = minutes * 6  # 360/60 = 6 degrees/minute
     angle = abs(hours_angle - minutes_angle)
     return angle if angle < 180 else 360 - angle
-
-print(find_smallest_angle("4:30"))
